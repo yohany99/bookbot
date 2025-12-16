@@ -5,7 +5,7 @@ def main():
     try:
         text = get_book_text(sys.argv)
         print("============ BOOKBOT ============")
-        print("Analyzing book found at books/frankenstein.txt...")
+        print(f"Analyzing book found at {sys.argv[1]}...")
         print("----------- Word Count ----------")
         print(count_words(text))
         char_map = count_characters(text)
@@ -25,5 +25,5 @@ def get_book_text(file_path):
         with open(file_path[1], encoding="utf-8") as f:
             read_data = f.read()
             return read_data 
-            
+
 main()
